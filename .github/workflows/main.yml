@@ -44,16 +44,6 @@ jobs:
         Invoke-WebRequest -Uri "https://raw.githubusercontent.com/mamunxoarder5/win11/refs/heads/main/.github/workflows/setup.bat" -OutFile "setup.bat"
         cmd /c setup.bat
 
-    - name: Install Python libraries
-      shell: bash
-      run: |
-        pip install pillow requests
-
-    - name: Run show.bat
-      shell: cmd
-      run: |
-        call show.bat
-
     - name: Keep runner alive (heartbeat)
       shell: powershell
       run: |
